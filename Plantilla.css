@@ -1,0 +1,342 @@
+
+body {
+    font-family: "Times New Roman";
+    color: #333;
+    font-size: 1.3rem;
+    line-height: 1.4em;
+    margin: 0;
+  }
+
+    
+  .bodyhover{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+  h1 {
+    text-align: center;
+    font-size: 3rem;
+    line-height: 1.3em;
+  }
+  
+  p {
+    margin-bottom: 1.6em;
+  }
+  
+  .container {
+    width: 85%;
+    max-width: 850;
+    margin: 0 auto;
+    align-content: center;
+    text-align: center;
+  }
+
+  .containercard{
+    width: 100%;
+    display: flex;
+    max-width: 1100px;
+  }
+
+  .card{
+    width: 100%;
+    height: 500px;
+    margin: 10px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: rgba(151, 151, 151, 0.185);
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+    cursor: default;
+    transition: all 400ms ease;
+  }
+  .card:hover{
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+    transform: translateY(-3%);
+  }
+
+  .card img{
+    width: 100%;
+    height:  150px;
+    padding: 0px;
+  }
+
+  .card .contenido{
+    padding: 5px;
+    text-align: center;
+  }
+
+  .card .contenido p{
+    line-height: 1;
+    color: black;
+  }
+
+  .card .contenido h3{
+    font-weight: 200;
+    margin-bottom: 5px;
+  }
+  
+  .card .contenido a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px;
+    margin-top: 10px;
+    color: #2fb4cc;
+    border: 1px solid #2fb4cc;
+    transition: all 400ms ease; 
+  }
+
+  .card .contenido a:hover{
+    background: #2fb4cc;
+    color: #fff;
+  }
+
+  .header {
+    background: #333;
+    color: white;
+    padding: 2rem 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+  }
+  
+  .header a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .logo-nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+   .logo {
+    align-items: center;
+    letter-spacing: 10px;
+    font-size: 1.7em;
+  }
+  
+  .menu-icon {
+    display: none;
+  }
+  
+  /* todos los "ul" que esten dentro de "navigation" */
+  .navigation ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .navigation ul li {
+    /* uno al lado del otro */
+    display: inline-block;
+  }
+  
+  /* los enlaces dentro del menu */
+  .navigation ul li a {
+    display: block;
+    padding: 0.5rem 1rem;
+    transition: all 0.2s linear;
+    border-radius: 5px;
+  }
+  
+  .navigation ul li a:hover {
+    background: #a5a2a2;
+  }
+  
+  .main {
+    padding-top: 15rem;
+  }
+  
+  /*PIE DE PAGINA*/
+  .footer {
+    background: #333;
+    padding: 1.7rem 0;
+    font-size: 1.2em;
+    color: honeydew;
+    text-align: center;
+    margin-top: 6rem;
+  }
+  .footerT {
+    background: #333;
+    padding: 1.7rem 0;
+    font-size: 1.2em;
+    color: honeydew;
+    text-align: center;
+    margin-top: 45rem;
+  }
+  
+  .menu-link{
+      color: black;
+  }
+     
+  @media only screen and (max-width: 767px) {
+      .menu-icon{
+          display: block;
+          cursor: pointer;
+      }
+  
+      .navigation{
+          width: 100%;
+      }
+      .navigation ul{
+          display: none;
+      }
+      .navigation ul.show{
+          display: block;
+      }
+        
+      .navigation ul li {
+          display: block;
+        }
+        
+        /* los enlaces dentro del menu */
+        .navigation ul li a {
+          display: block;
+          padding: 0.5rem 1rem;
+          transition: all 0.2s linear;
+          border-radius: 5px;
+        }
+        
+        .navigation ul li a:hover {
+          background: #8f8d8d;
+        }
+    }
+    
+    ul, li {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+     }
+     ul.slider{
+      position: relative;
+      width: inherit;
+      height: inherit;
+      
+     }
+     ul.slider li {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      opacity: 0;
+      width: inherit;
+      height: inherit;
+      transition: opacity .5s;
+      background:#fff;
+    
+     }
+     ul.slider li img{
+      width: 80%;
+      height: 400px;
+      object-fit: cover;
+      align-content: center;
+      text-align: center;
+     }
+     ul.slider li:first-child {
+      opacity: 1; /*Mostramos el primer <li>*/
+     }
+     ul.slider li:target {
+      opacity: 1; /*Mostramos el <li> del enlace que pulsemos*/
+     }
+     .menu{
+      text-align: center;
+      margin: 20px;
+     }
+     .menu li{
+      display: inline;
+      text-align: center;
+     }
+     .menu li a{
+      display: inline-block;
+      color: white;
+      text-decoration: none;
+      background-color: grey;
+      padding: 10px;
+      width: 20px;
+      height: 20px;
+      font-size: 20px;
+      border-radius: 100%;
+     }
+
+
+/*Footer*/
+
+footer{
+	width: 100%;
+	padding: 50px 0px;
+	background-size: cover;
+	
+	/*background-color: #d0f0f8;
+	-webkit-mask-image: url("../Images/background-footer.svg");
+	mask-image: url("../Images/background-footer.svg");
+	-webkit-mask-size: cover;
+	mask-size: cover;*/
+  }
+  
+  .container__footer{
+	display: flex;
+	flex-wrap: wrap;
+	background: #333;
+	justify-content: space-between;
+	max-width: 100%;
+	margin: auto;
+	margin-top: 100px;
+  }
+
+  .container__footerT{
+    display: flex;
+    flex-wrap: wrap;
+    background: #333;
+    justify-content: space-between;
+    max-width: 100%;
+    margin: auto;
+    margin-top: 45 rem;
+    }
+  
+  .box__footer{
+	display: flex;
+	flex-direction: column;
+	padding: 40px;
+  }
+  
+  .box__footer .logo img{
+	width: 200px;
+  }
+  
+  .box__footer .terms{
+	max-width: 350px;
+	margin-top: 20px;
+	font-weight: 500;
+	color: #ffff;
+	font-size: 18px;
+  }
+  
+  .box__footer h2{
+	margin-bottom: 30px;
+	color: #ffff;
+	font-weight: 700;
+  }
+  
+  .box__footer a{
+	margin-top: 10px;
+	color: #ffff;
+	font-weight: 600;
+  }
+  
+  .box__footer p{
+	margin-top: 10px;
+	color: #ffff;
+	font-weight: 600;
+  }
+  
+  .box__footer a:hover{
+	opacity: 0.8;
+	background-color:  #333;
+  }
+  
+  .box__footer a .fab{
+	font-size: 20px;
+  }
